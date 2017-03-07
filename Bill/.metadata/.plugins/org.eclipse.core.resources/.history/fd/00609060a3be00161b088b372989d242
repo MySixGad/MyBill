@@ -1,0 +1,46 @@
+package com.example.bill.db.dao;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.bill.db.MyHelper;
+
+public class DataDao {
+
+	/**
+	 * 插入信息
+	 */
+	public static boolean insertInfo(Context context, String[] data) {
+		MyHelper help = new MyHelper(context);
+		SQLiteDatabase db = help.getReadableDatabase();
+		ContentValues values = new ContentValues();
+		values.put("pay_date", data[0]);
+		values.put("pay_person", data[1]);
+		values.put("pay_type", data[2]);
+		values.put("pay_detail", data[3]);
+		values.put("pay_rmb", data[4]);
+		values.put("pay_way", data[5]);
+		values.put("other", data[6]);
+		long id = db.insert("pay_table", null, values);
+		return id != -1;
+	}
+
+	/**
+	 * 查看
+	 * 
+	 */
+	public String[] showInfo(Context context, String[] data) {
+		MyHelper help = new MyHelper(context);
+		SQLiteDatabase db = help.getReadableDatabase();
+				
+		String[] selectionArgs = { date };
+		Cursor cursor = db.rawQuery("select * from pay_table where date= ? ", selectionArgs);
+
+		
+		
+		return 1;
+	}
+
+}

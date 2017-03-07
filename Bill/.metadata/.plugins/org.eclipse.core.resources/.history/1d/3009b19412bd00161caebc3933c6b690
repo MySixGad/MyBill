@@ -1,0 +1,30 @@
+package com.example.bill.utils;
+
+import android.content.Context;
+import android.preference.Preference;
+
+public class PreferenceUtils {
+
+	
+	/**
+	 * ±£´æ
+	 */
+	
+	public void setBoolean(Context context){
+		
+		context.getSharedPreferences(arg0, arg1)
+		
+		
+	}
+	
+	
+	/**
+	 * È¡³ö
+	 * @return
+	 */
+	public boolean getBoolean(){
+		return false;
+		
+		
+	}
+}

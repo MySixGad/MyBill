@@ -1,0 +1,42 @@
+1481085075548	Convert local variable 'calendar' to field
+1481179050088	Convert local variable 'builder' to field
+1481179169320	Rename package 'com.example.bill'
+1481181382907	Convert local variable 'dog_stu' to field
+1481181433688	Convert local variable 'dog_work' to field
+1481181435214	Convert local variable 'cat_work' to field
+1481181436986	Convert local variable 'has_son' to field
+1481182496401	Rename type 'Splash'
+1481182504343	Rename type 'Detailed'
+1481203372114	Convert local variable 'tv' to field
+1481204783870	Convert local variable 'view' to field
+1481258728013	Delete element
+1481258738548	Delete element
+1481259634459	Convert local variable 'millis1' to field
+1481261711641	Convert local variable 'builder' to field
+1481273873877	Convert local variable 'builder' to field
+1481274714947	Extract method 'showDialog'
+1481274868881	Move compilation unit
+1481274879500	Rename type 'Inset_inRMB'
+1481279026437	Delete element
+1481279270136	Move compilation unit
+1481297718472	Convert local variable 'in_sos' to field
+1481297720506	Convert local variable 'in_way' to field
+1481297760055	Convert local variable 'adapter' to field
+1481298239936	Rename field 'adapter'
+1481299928808	Delete elements
+1481335012890	Convert local variable 'pay_date' to field
+1481335015396	Convert local variable 'pay_person' to field
+1481335017794	Convert local variable 'pay_rmb' to field
+1481335020013	Convert local variable 'pay_detail' to field
+1481335022203	Convert local variable 'other' to field
+1481335209030	Convert local variable 'pay_type_s' to field
+1481335212722	Convert local variable 'pay_way_s' to field
+1481336476788	Rename type 'InsertDb'
+1481338341883	Delete elements
+1481351436328	Convert local variable 'show_date' to field
+1481351438985	Convert local variable 'show_person' to field
+1481351449792	Convert local variable 'show_type' to field
+1481351451757	Convert local variable 'show_rmb' to field
+1481351453617	Convert local variable 'show_way' to field
+1481351455489	Convert local variable 'other' to field
+1481393110394	Extract method 'initInfo'

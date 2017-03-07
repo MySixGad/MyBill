@@ -1,0 +1,45 @@
+package com.example.bill.db.dao;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.bill.db.MyHelper;
+
+public class DataDao {
+
+	/**
+	 * 插入信息
+	 */
+	public static long insertInfo(Context context, String[] data) {
+		MyHelper help = new MyHelper(context);
+		SQLiteDatabase db = help.getReadableDatabase();
+		ContentValues values = new ContentValues();
+		values.put("", data[0]);
+		values.put("", data[1]);
+		values.put("", data[2]);
+		values.put("", data[3]);
+		values.put("", data[4]);
+		values.put("", data[5]);
+		values.put("", data[6]);
+		long id = db.insert("pay_table", null, values);
+		return id;
+	}
+	
+	
+	
+	/**
+	 * 修改
+	 * 
+	 */
+	public long updateInfo(Context context, String[] data) {
+		MyHelper help = new MyHelper(context);
+		SQLiteDatabase db = help.getReadableDatabase();
+		ContentValues values=new ContentValues();
+	
+		
+		return 1;
+	}
+	
+
+}

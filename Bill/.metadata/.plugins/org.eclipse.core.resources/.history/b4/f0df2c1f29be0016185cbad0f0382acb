@@ -1,0 +1,20 @@
+package com.example.bill.activity;
+
+import com.example.bill.R;
+import com.example.bill.R.layout;
+import com.example.bill.R.menu;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+public class Inset_outRMBActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_inset_out_rmb);
+		
+	}
+
+}

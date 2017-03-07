@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#429ED6"
+    android:orientation="vertical"
+    tools:context=".Splash" >
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="我的账本"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000"
+        android:textSize="30sp" />
+    
+    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="36dp"
+        android:text="请选择人群："
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/textView1"
+        android:background="@drawable/splash_menu_selector"
+        android:button="@null"
+        android:layout_marginLeft="10dp"
+        android:text="单身学生娃"
+        android:textColor="#f15a22" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/splash_menu_selector"
+        android:button="@null"
+        android:text="膝下有子"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="24dp"
+        android:textColor="#ffc20e" />
+
+    
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/splash_menu_selector"
+        android:button="@null"
+        android:layout_gravity="center"
+        android:text="已婚上班族"
+        android:textColor="#8552a1" />
+
+    
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/splash_menu_selector"
+        android:button="@null"
+        android:text="单身上班仔"
+        android:textColor="#ed1941" />
+    
+    
+    
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#cd9a5b"
+        android:onClick="open"
+       	android:layout_gravity="center|bottom"
+        android:text="提交"
+    
+        android:textSize="20sp" />
+
+</LinearLayout>

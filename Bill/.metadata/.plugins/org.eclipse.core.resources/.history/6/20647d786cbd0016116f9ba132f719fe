@@ -1,0 +1,779 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailedActivity" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/back" >
+
+            <RelativeLayout
+                android:id="@+id/shang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:text="账单详情"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <!-- 第一行 -->
+
+                <LinearLayout
+                    android:id="@+id/lll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费时间："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2016年12月6日"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <!-- 第二行 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费人："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="刘国"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <!-- 第三行 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费项目："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="买保险"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="所属类型："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="社会消费"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <!-- 4 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费金额："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1500元"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费方式："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="刷卡"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="收款方式："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="无记录"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="备注："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="无"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lll1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:text="截止今日"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="本月共消费："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3500元"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="本月平均日消费（全部）："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2000元"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="本月平均日消费（生活）："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4000元"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="本年度平均月消费（全部）："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1500元"
+                                android:textColor="#000" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="18dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/rrr1"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true" >
+
+                            <TextView
+                                android:id="@+id/textVieww"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="记录："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textViewq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/textVieww"
+                                android:text="刘国"
+                                android:textColor="#000" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/rrr1"
+                            android:layout_centerHorizontal="true" >
+
+                            <TextView
+                                android:id="@+id/textVieww"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/textVieww"
+                                android:text="日期："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textViewq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/textVieww"
+                                android:text="2016.12.9"
+                                android:textColor="#000" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            
+            
+            <RelativeLayout
+                android:layout_below="@+id/shang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:text="账单详情"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <!-- 第一行 -->
+
+                <LinearLayout
+                    android:id="@+id/lll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费时间："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2016年12月6日"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <!-- 第二行 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费人："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="刘国"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <!-- 第三行 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费项目："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="买保险"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="所属类型："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="社会消费"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <!-- 4 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费金额："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1500元"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="消费方式："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="刷卡"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="收款方式："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="无记录"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="备注："
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="无"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lll1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:text="截止今日"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="本月共消费："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3500元"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="本月平均日消费（全部）："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2000元"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="本月平均日消费（生活）："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4000元"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="本年度平均月消费（全部）："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1500元"
+                                android:textColor="#000" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="18dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/rrr1"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true" >
+
+                            <TextView
+                                android:id="@+id/textVieww"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="记录："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textViewq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/textVieww"
+                                android:text="刘国"
+                                android:textColor="#000" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/rrr1"
+                            android:layout_centerHorizontal="true" >
+
+                            <TextView
+                                android:id="@+id/textVieww"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/textVieww"
+                                android:text="日期："
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/textViewq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/textVieww"
+                                android:text="2016.12.9"
+                                android:textColor="#000" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </RelativeLayout>
+        
+        
+    </ScrollView>
+
+</RelativeLayout>

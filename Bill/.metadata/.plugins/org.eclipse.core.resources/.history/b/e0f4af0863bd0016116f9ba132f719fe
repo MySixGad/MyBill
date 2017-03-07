@@ -1,0 +1,239 @@
+package com.example.bill.activity;
+
+import java.text.Format;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+
+import com.example.bill.R;
+import com.squareup.timessquare.CalendarPickerView;
+import com.squareup.timessquare.CalendarPickerView.OnDateSelectedListener;
+import com.squareup.timessquare.CalendarPickerView.SelectionMode;
+
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.text.format.Formatter;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity implements OnClickListener {
+	private ListView listview;
+	private RadioButton look;
+	private RadioButton insert;
+	private RadioButton update;
+	boolean b1;
+	boolean b2;
+	boolean b3;
+	private CalendarPickerView calendar;
+	private AlertDialog.Builder builder;
+
+	ArrayList<String> list = new ArrayList<String>();
+
+	@SuppressWarnings("deprecation")
+	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		list.add("查看");
+		list.add("添加");
+		list.add("修改");
+		list.add("删除");
+		list.add("账目总结");
+		list.add("本地备份");
+		list.add("新账目 +6");
+		list.add("账目总结");
+		list.add("家庭成员");
+		list.add("我的账户");
+		list.add("安全中心");
+		list.add("风格设置");
+		list.add("特效开关");
+		list.add("程序锁");
+		list.add("单机/网络");
+		list.add("更新版本");
+
+		look = (RadioButton) findViewById(R.id.button1);
+		insert = (RadioButton) findViewById(R.id.button2);
+		update = (RadioButton) findViewById(R.id.button3);
+		look.setOnClickListener(this);
+		insert.setOnClickListener(this);
+		update.setOnClickListener(this);
+		listview = (ListView) findViewById(R.id.listView1);
+
+		final Calendar nextYear = Calendar.getInstance();
+		nextYear.add(Calendar.YEAR, 5);
+
+		final Calendar lastYear = Calendar.getInstance();
+		lastYear.add(Calendar.YEAR, -5);
+
+		calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
+		calendar.init(lastYear.getTime(), nextYear.getTime())
+				.inMode(SelectionMode.SINGLE) //
+				.withSelectedDate(new Date());
+		// calendar.setRotation(R.anim.push_up_in);
+
+		TranslateAnimation am = new TranslateAnimation(
+				Animation.RELATIVE_TO_PARENT, 0, Animation.RELATIVE_TO_PARENT,
+				0, Animation.RELATIVE_TO_PARENT, 0.9f,
+				Animation.RELATIVE_TO_PARENT, 0f);
+		am.setDuration(1000);
+		// am.setFillAfter(true);
+		am.setRepeatCount(0);
+		// am.setRepeatMode(Animation.REVERSE);
+
+		calendar.setAnimation(am);
+
+		look.setChecked(true);
+
+		calendar.setOnDateSelectedListener(new OnDateSelectedListener() {
+
+			@Override
+			public void onDateUnselected(Date date) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onDateSelected(Date date) {
+				Toast.makeText(getApplicationContext(), "" + date, 1).show();
+
+			}
+		});
+
+		listview.setAdapter(new BaseAdapter() {
+			private View view = null;
+
+			@Override
+			public View getView(int position, View convertView, ViewGroup parent) {
+
+				if (convertView == null) {
+					view = View.inflate(getApplicationContext(), R.layout.item,
+							null);
+				} else {
+					view = convertView;
+				}
+
+				TextView sele = (TextView) view.findViewById(R.id.sele);
+				sele.setText(list.get(position));
+
+				return view;
+			}
+
+			@Override
+			public long getItemId(int position) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public Object getItem(int position) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public int getCount() {
+				// TODO Auto-generated method stub
+				return list.size();
+			}
+		});
+
+		builder = new AlertDialog.Builder(this);
+
+		listview.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+
+				Intent it = new Intent(MainActivity.this,
+						DetailedActivity.class);
+				startActivityForResult(it, 0);
+				overridePendingTransition(R.anim.scale_translate,
+						R.anim.scale_translate);
+			}
+		});
+
+		// 滑动监听
+		listview.setOnScrollListener(new OnScrollListener() {
+
+			@Override
+			public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+			}
+
+			@Override
+			public void onScroll(AbsListView view, int firstVisibleItem,
+					int visibleItemCount, int totalItemCount) {
+
+				if (firstVisibleItem >= 0 && firstVisibleItem < 6) {
+					look.setChecked(true);
+					insert.setChecked(false);
+					update.setChecked(false);
+				} else if (firstVisibleItem >= 6 && firstVisibleItem < 11) {
+					look.setChecked(false);
+					insert.setChecked(true);
+					update.setChecked(false);
+				} else if (firstVisibleItem >= 11) {
+					look.setChecked(false);
+					insert.setChecked(false);
+					update.setChecked(true);
+				}
+			}
+		});
+
+	}
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		overridePendingTransition(R.anim.hyperspace_in, R.anim.hyperspace_out);
+		super.onBackPressed();
+
+	}
+
+	@Override
+	public void onClick(View v) {
+
+		switch (v.getId()) {
+
+		case R.id.button1:
+			listview.setSelection(0);
+
+			break;
+		case R.id.button2:
+
+			listview.setSelection(6);
+
+			break;
+
+		case R.id.button3:
+
+			listview.setSelection(11);
+
+			break;
+		}
+
+	}
+
+}

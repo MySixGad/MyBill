@@ -1,0 +1,66 @@
+package com.example.bill.utils;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.preference.Preference;
+
+public class PreferenceUtils {
+
+	/**
+	 * 保存boolean
+	 */
+
+	public static void setBoolean(Context context, String key, boolean value) {
+
+		SharedPreferences sp = context.getSharedPreferences("config",
+				Context.MODE_PRIVATE);
+		Editor edit = sp.edit();
+		edit.putBoolean(key, value);
+		edit.commit();
+
+	}
+
+	/**
+	 * 取出boolean
+	 * 
+	 * @return
+	 */
+	public static boolean getBoolean(Context context, String key, boolean defValue) {
+
+		SharedPreferences sp = context.getSharedPreferences("config",
+				Context.MODE_PRIVATE);
+		boolean result = sp.getBoolean(key, defValue);
+		return result;
+
+	}
+	
+	
+	/**
+	 * 保存int
+	 */
+	
+	public static void setInt(Context context, String key, int value) {
+		
+		SharedPreferences sp = context.getSharedPreferences("config",
+				Context.MODE_PRIVATE);
+		Editor edit = sp.edit();
+		edit.putInt(key, value);
+		edit.commit();
+		
+	}
+	
+	/**
+	 * 取出int
+	 * 
+	 * @return
+	 */
+	public static int getInt(Context context, String key, int defValue) {
+		
+		SharedPreferences sp = context.getSharedPreferences("config",
+				Context.MODE_PRIVATE);
+		int result = sp.getInt(key, defValue);
+		return result;
+		
+	}
+}

@@ -1,0 +1,5 @@
+com.android.ide.eclipse.adt.autoPickTarget=false
+com.android.ide.eclipse.adt.fixLegacyEditors=1
+com.android.ide.eclipse.adt.sdk=D\:\\SDK  64\u4F4Declipse  jdk\\adt-bundle-windows-x86_64-20131030\\sdk
+design.structure.flyout.width=264
+eclipse.preferences.version=1

@@ -1,0 +1,4 @@
+1481099763045	Extract local variable 'myadapter'
+1481099773229	Convert local variable 'myadapter' to field
+1481099816423	Convert local variable 'lv' to field
+1481102032582	Convert local variable 'holder' to field
